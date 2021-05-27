@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="index.js" defer></script>
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution{ margin-top: 5px;}
+  </style>
+</head>
+<body class="theme-1">
+<section class="wrapper">
+  <div class="calc">
+  <div class="header">
+    <h1>calc</h1>
+    <p>THEME
+    </p>
+    
+  </div>
+  <div data-previous-operand class="previous-operand"></div>
+  <div data-current-operand class="current-operand number">
+  </div>
+  <div class="container">
+    <button data-number class="digit 7">7</button>
+    <button data-number class="digit 8">8</button>
+    <button data-number class="digit 9">9</button>
+    <button data-delete class="digit del">DEL</button>
+    <button data-number class="digit 4">4</button>
+    <button data-number class="digit 5 ">5</button>
+    <button data-number class="digit 6">6</button>
+    <button data-operation class="digit plus">+</button> 
+    <button data-number class="digit 1">1</button>
+    <button data-number class="digit 2">2</button>
+    <button data-number class="digit 3">3</button>
+    <button data-operation class="digit subtract">-</button>
+    <button data-number class="digit decimal">.</button>
+    <button data-number class="digit 0">0</button>
+    <button data-operation class="digit divide">/</button>
+    <button data-operation class="digit multiply">x</button>
+    <div class="footer">
+      <button data-all-clear class="footer reset">RESET</button>
+      <button data-equal class="footer equals">=</button>
+    </div>
+  </div>
+</div>
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="https://www.github.com/joshuahclark999">Joshuah Clark</a>.
+</div>
+</section>
+  
+</body>
+</html>
