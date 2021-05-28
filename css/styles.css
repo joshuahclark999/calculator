@@ -71,7 +71,6 @@ body {
 .wrapper .calc .container {
   border-radius: 10px;
   padding: 10px;
-  background-color: #252D44;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50px 50px 50px 50px;
