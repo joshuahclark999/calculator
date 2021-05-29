@@ -1,17 +1,17 @@
 // //variables
-// .theme-1{
-//    $mainBack: hsl(222, 26%, 31%);
-//    $keyBack:  hsl(223, 31%, 20%);
-//    $screenBack:hsl(224, 36%, 15%);
-//    $keyFront: hsl(30, 25%, 89%);
-//    $keyShadow:hsl(28, 16%, 65%);
-//    $delResBack:hsl(225, 21%, 49%);
-//    $delResShadow:hsl(224, 28%, 35%);
-//    $equalBack: hsl(6, 63%, 50%) ;
-//    $equalShadow:hsl(6, 70%, 34%);
-//    $textDelRes:hsl(0, 0, 100%) ;
-//    $textNum:  hsl(221, 14%, 31%);
-// }
+.theme-1{
+   $mainBack: hsl(222, 26%, 31%);
+   $keyBack:  hsl(223, 31%, 20%);
+   $screenBack:hsl(224, 36%, 15%);
+   $keyFront: hsl(30, 25%, 89%);
+   $keyShadow:hsl(28, 16%, 65%);
+   $delResBack:hsl(225, 21%, 49%);
+   $delResShadow:hsl(224, 28%, 35%);
+   $equalBack: hsl(6, 63%, 50%) ;
+   $equalShadow:hsl(6, 70%, 34%);
+   $textDelRes:hsl(0, 0, 100%) ;
+   $textNum:  hsl(221, 14%, 31%);
+}
 // .theme-2{
 //     $mainBack: hsl(0, 0%, 90%);
 //     $keyBack:  hsl(0, 5%, 81%);
@@ -38,71 +38,72 @@
 //    $textDelRes:hsl(0, 0, 100%) ;
 //      $textNum: hsl(52, 100%, 62%);
 // }
-$color-scheme: (
-    (default, hsl(222, 26%, 31%),
-    hsl(223, 31%, 20%),
-    hsl(224, 36%, 15%),
-    hsl(30, 25%, 89%),
-    hsl(28, 16%, 65%),
-    hsl(225, 21%, 49%),
-    hsl(224, 28%, 35%),
-    hsl(6, 63%, 50%) ,
-    hsl(6, 70%, 34%),
-    hsl(0, 0, 100%) ,
-    hsl(221, 14%, 31%)
-    ),
-    (
-    theme-two, 
-    hsl(0, 0%, 90%),
-    hsl(0, 5%, 81%),
-    hsl(0, 0%, 93%),
-    hsl(45, 7%, 89%),
-    hsl(35, 11%, 61%),
-    hsl(185, 42%, 37%),
-    hsl(185, 58%, 25%),
-    hsl(25, 98%, 40%),
-    hsl(25, 99%, 27%),
-    hsl(0, 0, 100%),
-    hsl(60, 10%, 19%),
-    ),
-    (
-    theme-three, 
-    hsl(268, 75%, 9%),
-    hsl(268, 71%, 12%),
-    hsl(268, 71%, 12%),
-    hsl(268, 47%, 21%),
-    hsl(290, 70%, 36%),
-    hsl(281, 89%, 26%),
-    hsl(285, 91%, 52%),
-    hsl(176, 100%, 44%),
-    hsl(177, 92%, 70%),
-    hsl(0, 0, 100%) ,
-    hsl(52, 100%, 62%),
-    )
-);
-@mixin theme(
-    $name,
-    $mainBack,
-    $keyBack,
- $screenBack,
-   $keyFront,
-  $keyShadow,
- $delResBack,
-$delResShadow,
-  $equalBack,
-$equalShadow,
- $textDelRes,
-    $textNum,
-) {
-    .#{$name}{
-        body{
-            background-color: $mainBack;
-        }
-        .container{
-            background-color: red;
-        }
-    }
-}
+// $themes: (
+//     'default':
+//     (hsl(222, 26%, 31%),
+//     hsl(223, 31%, 20%),
+//     hsl(224, 36%, 15%),
+//     hsl(30, 25%, 89%),
+//     hsl(28, 16%, 65%),
+//     hsl(225, 21%, 49%),
+//     hsl(224, 28%, 35%),
+//     hsl(6, 63%, 50%) ,
+//     hsl(6, 70%, 34%),
+//     hsl(0, 0, 100%) ,
+//     hsl(221, 14%, 31%)
+//     ),
+//     'theme-two':
+//     (
+//     hsl(0, 0%, 90%),
+//     hsl(0, 5%, 81%),
+//     hsl(0, 0%, 93%),
+//     hsl(45, 7%, 89%),
+//     hsl(35, 11%, 61%),
+//     hsl(185, 42%, 37%),
+//     hsl(185, 58%, 25%),
+//     hsl(25, 98%, 40%),
+//     hsl(25, 99%, 27%),
+//     hsl(0, 0, 100%),
+//     hsl(60, 10%, 19%),
+//     ),
+//     'theme-three':
+//     ( 
+//     hsl(268, 75%, 9%),
+//     hsl(268, 71%, 12%),
+//     hsl(268, 71%, 12%),
+//     hsl(268, 47%, 21%),
+//     hsl(290, 70%, 36%),
+//     hsl(281, 89%, 26%),
+//     hsl(285, 91%, 52%),
+//     hsl(176, 100%, 44%),
+//     hsl(177, 92%, 70%),
+//     hsl(0, 0, 100%) ,
+//     hsl(52, 100%, 62%),
+//     )
+// );
+// @mixin theme(
+//     $name,
+//     $mainBack,
+//     $keyBack,
+//  $screenBack,
+//    $keyFront,
+//   $keyShadow,
+//  $delResBack,
+// $delResShadow,
+//   $equalBack,
+// $equalShadow,
+//  $textDelRes,
+//     $textNum,
+// ) {
+//     .#{$name}{
+//         body{
+//             background-color: $mainBack;
+//         }
+//         .container{
+//             background-color: red;
+//         }
+//     }
+// }
 body{
     font-family: 'Spartan', sans-serif;
     background-color: #3B4664;
@@ -111,6 +112,7 @@ body{
     align-items: center; 
 }
 .wrapper{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,29 +130,32 @@ body{
             color: #FFFEFE;
             display: flex;
             justify-content: space-between;
-            width: 60%;
+            min-width: 300px;
         }
         .current-operand{
             text-align: right;
             margin-bottom: 10px;
             color: #FFFEFE;
-            width: 60%;
             height: 40px;
             background-color: #252D44;
             border-radius: 10px;
             padding: 10px;
             font-size: 26px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 300px;
         }
         .container{
             border-radius: 10px;
             padding: 10px;
-            
+            background-color: hsl(223, 31%, 20%);
             display: grid;
             grid-template-columns: 50px 50px 50px 50px;
             grid-template-rows: 50px auto 50px; 
             column-gap: 10px;
             row-gap: 15px;
             width: 60%;
+            min-width: 300px;
             justify-content: space-around;
         }
             .digit  {
@@ -164,8 +169,7 @@ body{
                 border: none;
                 border-bottom:2px solid #B5A499;
                 border-radius: 10px;
-                color: #464A5B;
-                
+                color: #464A5B; 
             }
             .del{
                 color: #FBFEFF;
@@ -174,30 +178,25 @@ body{
                 font-size: 1rem;
             }
             .footer{
-                text-align: center;
-                width: 60vh;             
+                min-width: 150px;
+                display: flex;        
+            }
+            .reset, .equals{
+                color: #FBFEFF;
+                border: none;
+                border-radius: 10px;
+                height: 3em;
+                font-size: 1rem;  
+                margin-right: 10px;
             }
             .reset{
-                color: #FBFEFF;
-                background-color: #647299;
-                border: none;
                 border-bottom:4px solid #414E71;
-                border-radius: 10px;
-                height: 8vh;
-                width: 10vw;
-                font-size: 1rem;
+                background-color: #647299;
             }
             .equals{
-                color: #FBFEFF;
                 background-color: #D13F30;
-                border: none;
                 border-bottom:4px solid #8F2316;
-                border-radius: 10px;
-                height: 8vh;
-                width: 10vw;
-                font-size: 1rem;
-            }
-            
+            } 
         }
     }
     
