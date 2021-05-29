@@ -60,8 +60,17 @@ const resetButton = document.querySelector("[data-all-clear]");
 const deleteButton = document.querySelector("[data-delete]");
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const html = document.querySelector('html');
 
-
+const themeOne= ()=>{
+    html.setAttribute('data-theme','theme-1');
+};
+const themeTwo= ()=>{
+    html.setAttribute('data-theme','theme-2');
+};
+const themeThree= ()=>{
+    html.setAttribute('data-theme','theme-3');
+};
 
 const calculator = new Calculator(previousOperandTextElement,currentOperandTextElement)
 

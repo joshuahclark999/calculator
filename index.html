@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="theme-1">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -22,9 +22,12 @@
   <div class="calc">
   <div class="header">
     <h1>calc</h1>
-    <p>THEME
-    </p>
-    
+    <p>THEME</p>
+    <div class="radiobar">
+      <input type="radio" name="theme" id="theme-1" checked onclick="themeOne()">
+      <input type="radio" name="theme" id="theme-2" onclick="themeTwo()">
+      <input type="radio" name="theme" id="theme-3" onclick="themeThree()">
+    </div>
   </div>
   <div data-previous-operand class="previous-operand"></div>
   <div data-current-operand class="current-operand number">

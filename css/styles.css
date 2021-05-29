@@ -1,6 +1,48 @@
+html[data-theme="theme-1"] {
+  --bg: hsl(222, 26%, 31%);
+  --keyBack:  hsl(223, 31%, 20%);
+  --screenBack:hsl(224, 36%, 15%);
+  --keyFront: hsl(30, 25%, 89%);
+  --keyShadow:hsl(28, 16%, 65%);
+  --delResBack:hsl(225, 21%, 49%);
+  --delResShadow:hsl(224, 28%, 35%);
+  --equalBack: hsl(6, 63%, 50%) ;
+  --equalShadow:hsl(6, 70%, 34%);
+  --white:rgb(255, 255, 255) ;
+  --textNum:  hsl(221, 14%, 31%);
+}
+
+html[data-theme="theme-2"] {
+  --bg: hsl(0, 0%, 90%);
+  --keyBack:  hsl(0, 5%, 81%);
+  --screenBack: hsl(0, 0%, 93%);
+  --keyFront: hsl(45, 7%, 89%);
+  --keyShadow:  hsl(35, 11%, 61%);
+  --delResBack:hsl(185, 42%, 37%) ;
+  --delResShadow: hsl(185, 58%, 25%);
+  --equalBack: hsl(25, 98%, 40%);
+  --equalShadow: hsl(25, 99%, 27%);
+  --white: rgb(255, 255, 255);
+  --textNum:hsl(60, 10%, 19%) ;
+}
+
+html[data-theme="theme-3"] {
+  --bg: hsl(268, 75%, 9%);
+  --keyBack:  hsl(268, 71%, 12%);
+  --screenBack: hsl(268, 71%, 12%) ;
+  --keyFront: hsl(268, 47%, 21%) ;
+  --keyShadow:hsl(290, 70%, 36%);
+  --delResBack:hsl(281, 89%, 26%);
+  --delResShadow: hsl(285, 91%, 52%);
+  --equalBack: hsl(176, 100%, 44%);
+  --equalShadow: hsl(177, 92%, 70%);
+  --white:rgb(255, 255, 255) ;
+  --textNum: hsl(52, 100%, 62%);
+}
+
 body {
   font-family: 'Spartan', sans-serif;
-  background-color: #3B4664;
+  background-color: var(--bg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,8 +87,11 @@ body {
   height: auto;
 }
 
+.wrapper .calc .header, .wrapper .calc .current-operand {
+  color: var(--textNum);
+}
+
 .wrapper .calc .header {
-  color: #FFFEFE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,12 +101,27 @@ body {
   min-width: 300px;
 }
 
+.wrapper .calc .header p {
+  color: white;
+}
+
+.wrapper .calc .header .radiobar {
+  margin-top: 20px;
+  background-color: var(--keyBack);
+  height: 20px;
+  padding: 2px 5px 0px;
+  border-radius: 50px;
+}
+
+.wrapper .calc .header .radiobar input {
+  margin: 0%;
+}
+
 .wrapper .calc .current-operand {
   text-align: right;
   margin-bottom: 10px;
-  color: #FFFEFE;
   height: 40px;
-  background-color: #252D44;
+  background-color: var(--screenBack);
   border-radius: 10px;
   padding: 10px;
   font-size: 26px;
@@ -73,7 +133,7 @@ body {
 .wrapper .calc .container {
   border-radius: 10px;
   padding: 10px;
-  background-color: #232c43;
+  background-color: var(--keyBack);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50px 50px 50px 50px;
@@ -100,19 +160,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #EAE3DB;
+  background-color: var(--keyFront);
   width: 70px;
   height: 50px;
   border: none;
-  border-bottom: 2px solid #B5A499;
+  border-bottom: 2px solid var(--keyShadow);
   border-radius: 10px;
-  color: #464A5B;
+  color: var(--textNum);
 }
 
-.wrapper .calc .del {
-  color: #FBFEFF;
-  background-color: #647299;
-  border-bottom: 4px solid #414E71;
+.wrapper .calc .del, .wrapper .calc .reset {
+  color: var(--white);
+  background-color: var(--delResBack);
+  border-bottom: 4px solid var(--delResShadow);
   font-size: 1rem;
 }
 
@@ -124,7 +184,7 @@ body {
 }
 
 .wrapper .calc .reset, .wrapper .calc .equals {
-  color: #FBFEFF;
+  color: var(--white);
   border: none;
   border-radius: 10px;
   height: 3em;
@@ -132,13 +192,8 @@ body {
   margin-right: 10px;
 }
 
-.wrapper .calc .reset {
-  border-bottom: 4px solid #414E71;
-  background-color: #647299;
-}
-
 .wrapper .calc .equals {
-  background-color: #D13F30;
-  border-bottom: 4px solid #8F2316;
+  background-color: var(--equalBack);
+  border-bottom: 4px solid var(--equalShadow);
 }
 /*# sourceMappingURL=styles.css.map */
