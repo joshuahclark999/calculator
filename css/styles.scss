@@ -10,6 +10,7 @@ html[data-theme="theme-1"]{
    --equalShadow:hsl(6, 70%, 34%);
    --white:rgb(255, 255, 255) ;
    --textNum:  hsl(221, 14%, 31%);
+   --headerText: rgb(255, 255, 255) ;
 }
 html[data-theme="theme-2"]{
     --bg: hsl(0, 0%, 90%);
@@ -23,6 +24,7 @@ html[data-theme="theme-2"]{
     --equalShadow: hsl(25, 99%, 27%);
     --white: rgb(255, 255, 255);
     --textNum:hsl(60, 10%, 19%) ;
+    --headerText: hsl(60, 10%, 19%) ;
 }
 html[data-theme="theme-3"]{
     --bg: hsl(268, 75%, 9%);
@@ -36,6 +38,7 @@ html[data-theme="theme-3"]{
     --equalShadow: hsl(177, 92%, 70%);
     --white:rgb(255, 255, 255) ;
     --textNum: hsl(52, 100%, 62%);
+    --headerText: hsl(52, 100%, 62%);
 }
 body{
     font-family: 'Spartan', sans-serif;
@@ -60,14 +63,14 @@ body{
         width: 55%;
         height: auto;
         .header, .current-operand{
-            color: var(--textNum);
+            color: var(--headerText);
         }
         .header{ 
             display: flex;
             justify-content: space-between;
             min-width: 300px;
-            p{
-                color:white;
+            .dumb{
+                display: flex;
             }
             .radiobar{
                 margin-top: 20px;
@@ -118,7 +121,7 @@ body{
                 border-radius: 10px;
                 color: var(--textNum); 
             }
-            .del, .reset{
+            .del, .reset, .equals{
                 color: var(--white);
                 background-color: var(--delResBack) ;
                 border-bottom: 4px solid var(--delResShadow);
@@ -126,7 +129,7 @@ body{
             }
             .footer{
                 min-width: 150px;
-                display: flex;        
+                display: flex;   
             }
             .reset, .equals{
                 color: var(--white);
@@ -135,6 +138,9 @@ body{
                 height: 3em;
                 font-size: 1rem;  
                 margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .equals{
                 background-color: var(--equalBack);

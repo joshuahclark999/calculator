@@ -10,6 +10,7 @@ html[data-theme="theme-1"] {
   --equalShadow:hsl(6, 70%, 34%);
   --white:rgb(255, 255, 255) ;
   --textNum:  hsl(221, 14%, 31%);
+  --headerText: rgb(255, 255, 255) ;
 }
 
 html[data-theme="theme-2"] {
@@ -24,6 +25,7 @@ html[data-theme="theme-2"] {
   --equalShadow: hsl(25, 99%, 27%);
   --white: rgb(255, 255, 255);
   --textNum:hsl(60, 10%, 19%) ;
+  --headerText: hsl(60, 10%, 19%) ;
 }
 
 html[data-theme="theme-3"] {
@@ -38,6 +40,7 @@ html[data-theme="theme-3"] {
   --equalShadow: hsl(177, 92%, 70%);
   --white:rgb(255, 255, 255) ;
   --textNum: hsl(52, 100%, 62%);
+  --headerText: hsl(52, 100%, 62%);
 }
 
 body {
@@ -88,7 +91,7 @@ body {
 }
 
 .wrapper .calc .header, .wrapper .calc .current-operand {
-  color: var(--textNum);
+  color: var(--headerText);
 }
 
 .wrapper .calc .header {
@@ -101,8 +104,10 @@ body {
   min-width: 300px;
 }
 
-.wrapper .calc .header p {
-  color: white;
+.wrapper .calc .header .dumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .wrapper .calc .header .radiobar {
@@ -169,7 +174,7 @@ body {
   color: var(--textNum);
 }
 
-.wrapper .calc .del, .wrapper .calc .reset {
+.wrapper .calc .del, .wrapper .calc .reset, .wrapper .calc .equals {
   color: var(--white);
   background-color: var(--delResBack);
   border-bottom: 4px solid var(--delResShadow);
@@ -190,6 +195,15 @@ body {
   height: 3em;
   font-size: 1rem;
   margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wrapper .calc .equals {
